@@ -16,10 +16,10 @@ class Configuration implements ConfigurationInterface {
 
         $rootNode
             ->children()
-                ->arrayNode("mailer")
+                ->arrayNode("default_sender")
                     ->children()
                         ->scalarNode("sender_address")->defaultValue("noreply@example.com")->end()
-                        ->scalarNode("sender_name")->defaultValue("no-reply")->end()
+                        ->scalarNode("sender_name")->defaultValue("noreply")->end()
                     ->end()
                 ->end()
             ->end();
