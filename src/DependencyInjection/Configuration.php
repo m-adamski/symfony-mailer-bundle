@@ -16,12 +16,8 @@ class Configuration implements ConfigurationInterface {
 
         $rootNode
             ->children()
-                ->arrayNode("default_sender")
-                    ->children()
-                        ->scalarNode("sender_address")->defaultValue("noreply@example.com")->end()
-                        ->scalarNode("sender_name")->defaultValue("noreply")->end()
-                    ->end()
-                ->end()
+                ->scalarNode("sender_address")->defaultValue("noreply@example.com")->end()
+                ->scalarNode("sender_name")->defaultValue("no-reply")->end()
             ->end();
 
         return $treeBuilder;

@@ -16,8 +16,8 @@ class MailerExtension extends Extension {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter("mailer_bundle.mailer.sender_address", $config["default_sender"]["sender_address"]);
-        $container->setParameter("mailer_bundle.mailer.sender_name", $config["default_sender"]["sender_name"]);
+        $container->setParameter("mailer_bundle.mailer.sender_address", $config["mailer"]["sender_address"]);
+        $container->setParameter("mailer_bundle.mailer.sender_name", $config["mailer"]["sender_name"]);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . "/../Resources/config"));
         $loader->load("services.yaml");
