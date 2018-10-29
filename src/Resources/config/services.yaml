@@ -4,7 +4,7 @@ services:
         arguments:
             - "%mailer_bundle.mailer.sender_address%"
             - "%mailer_bundle.mailer.sender_name%"
-            - "@swiftmailer.mailer.abstract"
+            - "@swiftmailer.mailer"
             - "@twig"
 
     Adamski\Symfony\MailerBundle\Helper\MailerHelper:
