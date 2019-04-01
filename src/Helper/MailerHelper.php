@@ -5,9 +5,9 @@ namespace Adamski\Symfony\MailerBundle\Helper;
 use Adamski\Symfony\MailerBundle\Model\MailerMessage;
 use Swift_Mailer;
 use Twig\Environment;
-use Twig_Error_Loader;
-use Twig_Error_Runtime;
-use Twig_Error_Syntax;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 class MailerHelper {
 
@@ -79,9 +79,9 @@ class MailerHelper {
      * @param string $template
      * @param array  $context
      * @return string
-     * @throws Twig_Error_Loader
-     * @throws Twig_Error_Runtime
-     * @throws Twig_Error_Syntax
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function renderTemplate(string $template, array $context = []) {
         return $this->twigEnvironment->render($template, $context);
