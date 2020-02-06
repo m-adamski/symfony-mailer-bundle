@@ -1,7 +1,9 @@
-# Mailer Bundle for Symfony 4
+# Mailer Bundle for Symfony
 
-The package unifies the class nomenclature and adds new functionalities to the existing SwiftMailer library. 
+The package unifies the class nomenclature and adds new functionality to the existing SwiftMailer library. 
 Using it, creating messages is more convenient and faster.
+
+This bundle is compatible with Symfony 4.1 and Symfony 5.0. Symfony 3.4 compatibility abandoned.
 
 ## Installation
 
