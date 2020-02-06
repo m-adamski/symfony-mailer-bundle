@@ -1,6 +1,6 @@
 {
     "name": "m-adamski/symfony-mailer-bundle",
-    "description": "Bundle for Symfony 4 which helps compose and send emails",
+    "description": "Bundle for Symfony which helps compose and send emails",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -10,15 +10,14 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "symfony/framework-bundle": "^3.4|^4.1",
-        "symfony/swiftmailer-bundle": "^3.2",
-        "symfony/twig-bundle": "^3.4|^4.1"
+        "php": "^7.2",
+        "symfony/framework-bundle": "^4.1|^5.0",
+        "symfony/swiftmailer-bundle": "^3.4",
+        "symfony/twig-bundle": "^4.1|^5.0"
     },
     "require-dev": {
         "kint-php/kint": "^3.0",
-        "phpunit/phpunit": "^7.4",
-        "symfony/phpunit-bridge": "^4.1"
+        "symfony/phpunit-bridge": "^4.1|^5.0"
     },
     "config": {
         "sort-packages": true
@@ -35,7 +34,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 }

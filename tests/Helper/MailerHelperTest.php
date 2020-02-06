@@ -17,7 +17,7 @@ class MailerHelperTest extends TestCase {
     /**
      * {@inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
 
         $mailerMock = $this->createMock(Swift_Mailer::class);
         $mailerMock->method("send")
@@ -35,7 +35,7 @@ class MailerHelperTest extends TestCase {
     /**
      * Test of buildMessage method
      */
-    public function testBuildMessage() {
+    public function testBuildMessage(): void {
 
         $generatedMessage = $this->mailerHelper->buildMessage("subject", "body", "text/html", "utf8");
 
@@ -49,7 +49,7 @@ class MailerHelperTest extends TestCase {
     /**
      * Test of sendMessage method.
      */
-    public function testSendMessage() {
+    public function testSendMessage(): void {
 
         $generatedMessage = $this->mailerHelper->buildMessage("subject", "body", "text/html", "utf8");
 
@@ -63,7 +63,7 @@ class MailerHelperTest extends TestCase {
     /**
      * Test of renderTemplate method.
      */
-    public function testRenderTemplate() {
+    public function testRenderTemplate(): void {
 
         $generatedTemplate = $this->mailerHelper->renderTemplate("template.html.twig");
 
